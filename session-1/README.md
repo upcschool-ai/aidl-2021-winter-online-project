@@ -15,6 +15,16 @@ and install the dependencies
 pip install -r requirements.txt
 ```
 ## Running the project
+
+To run the project, run
+```
+python session-1/main.py
+```
+To run the project with different arguments, run
+```
+python session-1/main.py --n_samples N --n_features N --n_hidden N --n_outputs N --epochs N --batch_size N --lr x
+```
+
 ### With VSCode
 If you are using VSCode, install the Python extension. Then, this run configuration will work for you:
 ```
