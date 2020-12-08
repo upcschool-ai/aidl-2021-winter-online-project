@@ -43,3 +43,6 @@ If you are using VSCode, install the Python extension. Then, this run configurat
 }
 ```
 You should place it in `.vscode/launch.json`. For more information about debugging configurations, check https://code.visualstudio.com/docs/python/debugging
+
+### Debugging with PyCharm
+Check [this](https://www.jetbrains.com/help/pycharm/creating-and-editing-run-debug-configurations.html) official tutorial.
