@@ -26,7 +26,10 @@ python session-1/main.py --n_samples N --n_features N --n_hidden N --n_outputs N
 ```
 
 ### Debugging with VSCode
-If you are using VSCode, install the Python extension. Then, this run configuration will work for you:
+#### Interpreter
+If you are using VSCode, install the Python extension. Then, set up the interpreter to the new virtualenv you just created (`aidl-session1`) by following [these](https://code.visualstudio.com/docs/python/environments#:~:text=To%20do%20so%2C%20open%20the,Settings%2C%20with%20the%20appropriate%20interpreter) instructions. You can find out the path of your interpreter by running `which python` (Unix) or `where python` (Windows) after activating it.
+#### Run configuration
+Finally, this run configuration will work for you:
 ```
 {
     "version": "0.2.0",
@@ -45,4 +48,8 @@ If you are using VSCode, install the Python extension. Then, this run configurat
 You should place it in `.vscode/launch.json`. For more information about debugging configurations, check https://code.visualstudio.com/docs/python/debugging
 
 ### Debugging with PyCharm
+#### Interpreter
+If you are using PyCharm, set up the interpreter to the new virtualenv you just created (`aidl-session1`) by following [these](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html) instructions. You can find out the path of your interpreter by running `which python` (Unix) or `where python` (Windows) after activating it.
+
+#### Run configuration
 Check [this](https://www.jetbrains.com/help/pycharm/creating-and-editing-run-debug-configurations.html) official tutorial.
