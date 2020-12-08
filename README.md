@@ -1,4 +1,6 @@
 # aidl-2021-winter-online-project
+![AIDL image](https://i.imgur.com/ZFIpK6y.png)
+
 Repository with all the code for the Project subject of AIDL 2021 winter online
 
 ## Slides
