@@ -25,7 +25,7 @@ To run the project with different arguments, run
 python session-1/main.py --n_samples N --n_features N --n_hidden N --n_outputs N --epochs N --batch_size N --lr x
 ```
 
-### With VSCode
+### Debugging with VSCode
 If you are using VSCode, install the Python extension. Then, this run configuration will work for you:
 ```
 {
