@@ -45,7 +45,7 @@ Finally, this run configuration will work for you:
     ]
 }
 ```
-You should place it in `.vscode/launch.json`. For more information about debugging configurations, check https://code.visualstudio.com/docs/python/debugging
+You should place it in `.vscode/launch.json`. For more information about debugging configurations, check [these](https://code.visualstudio.com/docs/python/debugging) instructions.
 
 ### Debugging with PyCharm
 #### Interpreter
