@@ -52,4 +52,4 @@ You should place it in `.vscode/launch.json`. For more information about debuggi
 If you are using PyCharm, set up the interpreter to the new virtualenv you just created (`aidl-session1`) by following [these](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html) instructions. You can find out the path of your interpreter by running `which python` (Unix) or `where python` (Windows) after activating it.
 
 #### Run configuration
-Check [this](https://www.jetbrains.com/help/pycharm/creating-and-editing-run-debug-configurations.html) official tutorial.
+Check [here](https://www.jetbrains.com/help/pycharm/creating-and-editing-run-debug-configurations.html).
