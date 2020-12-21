@@ -6,6 +6,12 @@ from ray import tune
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
 
+def accuracy(labels, outputs):
+    preds = outputs.argmax(-1)
+    acc = (preds == labels.view_as(preds)).float().detach().numpy().mean()
+    return acc
+    
+
 def train_single_epoch(...):
     pass
 

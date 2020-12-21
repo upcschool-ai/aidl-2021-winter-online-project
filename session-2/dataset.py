@@ -1,21 +1,18 @@
-from torch.utils.data import Dataset
+import os
+
 import pandas as pd
+from torch.utils.data import Dataset
+from PIL import Image
 
 class MyDataset(Dataset):
 
     def __init__(self, images_path, labels_path, transform=None):
-        super().__init__()
-        self.images_path = images_path
-        self.labels_df = pd.read_csv(labels_path)
-        self.transform = transform
+        pass
         
 
     def __len__(self):
-        return len(self.labels_df)
+        pass
 
 
     def __getitem(self, idx):
-        suite_id, sample_id, code,value, character = self.labels_df.loc[idx, :]
-        path = os.path.join(self.images_path,  f"input_{suite_id}_{sample_id}_{code}.jpg")
-        if self.transform:
-            
+        pass

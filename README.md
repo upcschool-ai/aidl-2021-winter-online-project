@@ -5,3 +5,4 @@ Repository with all the code for the Project subject of AIDL 2021 winter online
 
 ## Slides
 * [Session 1](https://docs.google.com/presentation/d/1pI5AoQ_Pv3aGcXGxFiC3Ftfb8HmZ3429iicPWlVtEWc/edit?usp=sharing)
+* [Session 2](https://docs.google.com/presentation/d/1IU62yycLrbqnhiG75E-JGOUKcu2tucmWoKcFOiFdPSM/edit?usp=sharing)
