@@ -9,8 +9,9 @@ class MyModel(nn.Module):
         self.fc2 = nn.Linear(n_hidden, n_hidden)
         self.act2 = nn.Tanh()
         self.fc3 = nn.Linear(n_hidden, n_outputs)
-    
+        self.act3 = nn.LogSoftmax()
+
     def forward(self, x):
         x = self.act1(self.fc1(x))
         x = self.act2(self.fc2(x))
-        return self.fc3(x)
+        return self.act3(self.fc3(x))

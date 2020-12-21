@@ -14,7 +14,7 @@ parser.add_argument("--n_samples", help="amount of samples to train with", type=
 parser.add_argument("--n_features", help="amount of features per sample", type=int, default=20)
 parser.add_argument("--n_hidden", help="amount of hidden neurons", type=int, default=64)
 parser.add_argument("--n_outputs", help="amount of outputs", type=int, default=10)
-parser.add_argument("--epochs", help="number of epochs to train", type=int, default=5)
+parser.add_argument("--epochs", help="number of epochs to train", type=int, default=25)
 parser.add_argument("--batch_size", help="batch size", type=int, default=100)
 parser.add_argument("--lr", help="learning rate", type=float, default=0.1)
 args = parser.parse_args()
@@ -26,13 +26,15 @@ dataloader = DataLoader(my_dataset, batch_size=args.batch_size)
 
 my_model = MyModel(args.n_features, args.n_hidden, args.n_outputs).to(device)
 criterion = nn.MSELoss()
-optimizer = optim.SGD(my_model.parameters(), lr=args.lr)
+optimizer = optim.Adagrad(my_model.parameters(), lr=args.lr)
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, patience=5, factor=0.5)
 
 loss_history = []
 
 for epoch in range(args.epochs):
     print(f"Epoch {epoch+1}/{args.epochs}")
-    for x, y in dataloader:
+    losses = []
+    for i, (x, y) in enumerate(dataloader):
         x, y = x.to(device), y.to(device)
         optimizer.zero_grad()
         y_ = my_model(x)
@@ -40,6 +42,8 @@ for epoch in range(args.epochs):
         loss.backward()
         optimizer.step()
         loss_history.append(loss.item())
+        losses.append(loss.item())
+    scheduler.step(torch.mean(loss))
 
 plt.plot(loss_history)
 plt.title("Training loss")
