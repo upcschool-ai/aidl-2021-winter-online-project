@@ -14,5 +14,5 @@ class MyDataset(Dataset):
         pass
 
 
-    def __getitem(self, idx):
+    def __getitem__(self, idx):
         pass
