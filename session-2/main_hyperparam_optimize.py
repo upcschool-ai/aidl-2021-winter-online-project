@@ -1,16 +1,12 @@
+import torch
+from ray import tune
 
 from dataset import MyDataset
 from model import MyModel
-import torch
-from ray import tune
+from utils import accuracy, save_model
+
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
-
-def accuracy(labels, outputs):
-    preds = outputs.argmax(-1)
-    acc = (preds == labels.view_as(preds)).float().detach().numpy().mean()
-    return acc
-    
 
 def train_single_epoch(...):
     pass
@@ -20,17 +16,21 @@ def eval_single_epoch(...):
     pass
 
 
-def train_model(config):
-
-    my_dataset = MyDataset(...)
+def train_model(config, train_dataset, val_dataset):
     my_model = MyModel(...).to(device)
     for epoch in range(config["epochs"]):
         train_single_epoch(...)
         eval_single_epoch(...)
 
 
+def test_model(config, model, test_dataset):
+    pass
+
+
 if __name__ == "__main__":
 
+    my_dataset = MyDataset(...)
+    train_dataset, val_dataset, test_dataset = ...
     ray.init(configure_logging=False)
     analysis = tune.run(
         train_model,
@@ -43,4 +43,4 @@ if __name__ == "__main__":
         })
 
     print("Best hyperparameters found were: ", analysis.best_config)
-
+    print(test_model(...))

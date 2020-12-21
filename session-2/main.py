@@ -1,14 +1,11 @@
+import torch
 
 from dataset import MyDataset
 from model import MyModel
-import torch
+from utils import accuracy, save_model
+
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
-
-def accuracy(labels, outputs):
-    preds = outputs.argmax(-1)
-    acc = (preds == labels.view_as(preds)).float().detach().numpy().mean()
-    return acc
 
 
 def train_single_epoch(...):
@@ -27,6 +24,12 @@ def train_model(config):
         train_single_epoch(...)
         eval_single_epoch(...)
 
+    return my_model
+
+
+def test_model(...):
+    pass
+
 
 if __name__ == "__main__":
 
@@ -35,3 +38,5 @@ if __name__ == "__main__":
         "hyperparam_2": 2,
     }
     train_model(config)
+
+    print(test_model(...))
