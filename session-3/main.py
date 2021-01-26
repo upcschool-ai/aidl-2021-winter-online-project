@@ -2,7 +2,7 @@ import torch
 from torch.utils.data import DataLoader
 
 from model import MyModel
-from utils import accuracy
+from utils import binary_accuracy
 from torchvision import transforms
 from torchvision.datasets import ImageFolder
 import torch.optim as optim
@@ -17,6 +17,7 @@ def train_single_epoch(model, train_loader, optimizer):
     model.train()
     accs, losses = [], []
     for x, y in train_loader:
+        # You will need to do y = y.unsqueeze(1).float() to add an output dimension to the labels and cast to the correct type
         ...
         losses.append(loss.item())
         accs.append(acc.item())
@@ -48,12 +49,9 @@ def train_model(config):
     for epoch in range(config["epochs"]):
         loss, acc = train_single_epoch(my_model, train_loader, optimizer)
         print(f"Train Epoch {epoch} loss={loss:.2f} acc={acc:.2f}")
-        loss, acc = eval_single_epoch(my_model, val_loader)
+        loss, acc = eval_single_epoch(my_model, test_loader)
         print(f"Eval Epoch {epoch} loss={loss:.2f} acc={acc:.2f}")
     
-    loss, acc = eval_single_epoch(my_model, test_loader)
-    print(f"Test loss={loss:.2f} acc={acc:.2f}")
-
     return my_model
 
 
