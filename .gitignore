@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 
 # AIDL specific
-session-2/data/**.csv
-session-2/solution/data/**
+session-2/data/
+session-2/solution/data/
