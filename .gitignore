@@ -131,3 +131,5 @@ dmypy.json
 # AIDL specific
 session-2/data/*.csv
 session-2/data/*.jpg
+session-2/solution/data/*.jpg
+session-2/solution/data/*.csv
