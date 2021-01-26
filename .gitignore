@@ -129,5 +129,8 @@ dmypy.json
 .pyre/
 
 # AIDL specific
+.vscode/
 session-2/data/
 session-2/solution/data/
+session-3/data/
+session-3/solution/data/
