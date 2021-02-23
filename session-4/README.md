@@ -4,11 +4,11 @@ Implement a full project training on [Chinese MNIST](https://www.kaggle.com/gpre
 ### With Conda
 Create a conda environment by running
 ```
-conda create --name aidl-session3 python=3.8
+conda create --name aidl-session4 python=3.8
 ```
 Then, activate the environment
 ```
-conda activate aidl-session3
+conda activate aidl-session4
 ```
 and install the dependencies
 ```
@@ -18,5 +18,5 @@ pip install -r requirements.txt
 
 To run the project without hyperparameter tuning, run
 ```
-python session-3/main.py
+python session-4/main.py
 ```
