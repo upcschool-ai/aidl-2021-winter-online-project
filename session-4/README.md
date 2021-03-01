@@ -1,5 +1,7 @@
-# Session 2
-Implement a full project training on [Chinese MNIST](https://www.kaggle.com/gpreda/chinese-mnist) with hyperparameter tuning.
+# Session 4
+Implement a Deep Learning App. Train a model to classify text reviews between positive and negative and deploy a web app to predict on user reviews. 
+Then, deploy the model using Google Cloud App Engine.
+
 ## Installation
 ### With Conda
 Create a conda environment by running
@@ -14,9 +16,15 @@ and install the dependencies
 ```
 pip install -r requirements.txt
 ```
-## Running the project
 
-To run the project without hyperparameter tuning, run
+## Running the project
+To train the model run:
 ```
-python session-4/main.py
+python session-4/train.py
 ```
+
+To run the app run:
+```
+python session-4/app/main.py
+```
+then, you can test you app by going to http://localhost:8080

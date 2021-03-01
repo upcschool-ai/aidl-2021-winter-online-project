@@ -1,5 +1,5 @@
-# Session 2
-Implement a full project training on [Chinese MNIST](https://www.kaggle.com/gpreda/chinese-mnist) with hyperparameter tuning.
+# Session 3
+Train a model remotely using Google Cloud Compute Engine.
 ## Installation
 ### With Conda
 Create a conda environment by running
