@@ -1,17 +1,17 @@
 # set base image (host OS)
-FROM python:3.8-slim
+FROM ...
 
 # set the working directory in the container
-WORKDIR /app
+WORKDIR ...
 
 # copy the dependencies file to the working directory
-COPY requirements.txt requirements.txt
+COPY ...
 
 # install dependencies
-RUN pip install -r requirements.txt
+RUN ...
 
 # Copy code to the working directory
-COPY src/ .
+COPY ...
 
 # command to run on container start
-ENTRYPOINT ["python", "entrypoint.py"]
+ENTRYPOINT ...
