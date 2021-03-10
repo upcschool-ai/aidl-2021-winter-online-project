@@ -1,4 +1,4 @@
-# Session 4
+# Session 6
 Train and use a model using Docker.
 
 ## Installation
