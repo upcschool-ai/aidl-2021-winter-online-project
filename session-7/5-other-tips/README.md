@@ -14,4 +14,6 @@
 
 7. When training with GPUs, always check GPU usage by executing `nvidia-smi` in a terminal. If the usage is not close to 100%, you should increase batch size or optimize data loading. GPUs at low % are slower than CPUs!!
 
+   If you already have `nvidia-smi` but you don't like the way it looks, check out [gpustat](https://github.com/wookayin/gpustat). Its output is easier to read.
+
 If you have any other tip, feel free to do a PR to this repo and I will add it!
